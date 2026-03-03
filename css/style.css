@@ -1,0 +1,222 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #010539;
+    color: #ffffff;
+    text-align: center;
+}
+
+header {
+    background-color: #131313;
+    padding: 10px;
+    text-align: center;
+    padding-bottom: 100px;
+    background-image: linear-gradient(to bottom, #000000,#000544c3);
+    text-shadow: #000000;
+}
+
+.hero {
+    color: rgb(197, 197, 197);
+    margin-top: 130px;
+    font-size: 1.5em;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+}
+
+nav h1 {
+    color: white;
+    font-size: 1.1em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-left: 980px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #a2aeff;
+    border-radius: 2px;
+    padding: 5px 10px;
+    color: #00011e;
+}
+
+.container {
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 200px;
+}
+
+.container h1 {
+    font-size: 3.0em;
+}
+
+.container img {
+    margin-top: 20px;
+}
+
+.container main.resumo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.container main.resumo p {
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #dddddddc;
+    margin-left: 250px;
+}
+
+
+.container main.resumo img {
+    width: 250px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 200px;
+}
+
+.container main.projetos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    font-size: 1.2em;
+    color: #dddddd;
+    margin-top: 20px;
+}
+
+.container main.projetos img{
+    width: 200px; 
+    height: 200px;
+}
+
+.serviços {
+    display: grid;
+    grid-template-areas: 
+    "img1 serviço1"
+    "serviço2 img2"
+    "img3 serviço3";
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    margin: 20px;
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+.serviços .serviço1 {
+    grid-area: serviço1;
+    background-color: #001337;
+    padding: 20px;
+    border: 1px solid #4a4a4a;
+    border-radius: 10px;
+    color: #dddddd;
+}
+
+.serviços .serviço2 {
+    grid-area: serviço2;
+    background-color: #001337;
+    padding: 20px;
+    border: 1px solid #4a4a4a;
+    border-radius: 10px;
+    color: #dddddd;
+}
+
+.serviços .serviço3 {
+    grid-area: serviço3;
+    background-color: #001337;
+    padding: 20px;
+    border: 1px solid #4a4a4a;
+    border-radius: 10px;
+    color: #dddddd;
+}
+
+.serviços .serviço1 img1 {
+    grid-area: img1;
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+.serviços .serviço2 img2 {
+    grid-area: img2;
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+.serviços .serviço3 img3 {
+    grid-area: img3;
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+.serviços img{
+    width: 500px;
+    margin-bottom: 15px;
+}
+
+.imagem {
+    width: 250px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 10px;
+    color: #000000;
+    background-color: #fcfcfc;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+button {
+    padding: 13px;
+    background-color: #00021d;
+    color: white;
+    border: 1px solid #4a4a4a;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #282d51;
+}
+
+footer {
+    text-align: center;
+    padding: 12px;
+    background-color: #01001d;
+    color: white;
+    margin-top: 40px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
