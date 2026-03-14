@@ -1,0 +1,179 @@
+:root {
+    --bg-color: #f4f4f9;
+    --text-color: #333;
+    --card-bg: #fff;
+    --primary-color: #4CAF50;
+    --primary-hover: #45a049;
+    --border-color: #ddd;
+    
+    /* Cores de Prioridade */
+    --priority-alta: #ff4d4d;
+    --priority-media: #ffcc00;
+    --priority-baixa: #4CAF50;
+}
+
+body.dark-mode {
+    --bg-color: #0f3460;
+    --text-color: #e6e6e6;
+    --card-bg: #141e3968;
+    --primary-color: #071d39;
+    --primary-hover: #24243f;
+    --border-color: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header button {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+header button:hover {
+    background: white;
+    color: var(--primary-color);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.form-section, .list-section {
+    flex: 1;
+    min-width: 300px;
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input, .form-group select {
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: var(--primary-hover);
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.counters {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: right;
+}
+
+.task-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.task-card {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    border-left: 6px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.task-card.priority-Alta { border-left-color: var(--priority-alta); }
+.task-card.priority-Média { border-left-color: var(--priority-media); }
+.task-card.priority-Baixa { border-left-color: var(--priority-baixa); }
+
+.task-card.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.task-card h3 {
+    margin: 0 0 0.5rem 0;
+}
+
+.task-card p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+}
+
+.card-actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.card-actions button {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    transition: opacity 0.3s;
+}
+
+.card-actions button:hover { opacity: 0.8; }
+.btn-complete { background-color: var(--primary-color); }
+.btn-delete { background-color: var(--priority-alta); }
+
+.hidden { display: none; }
