@@ -1,4 +1,4 @@
-# GeoMundo — Backend
+# GeoMundo 
 
 API REST em TypeScript + Express + Prisma + PostgreSQL.
 
@@ -61,3 +61,8 @@ npm run dev
 ```
 
 Acesse: **http://localhost:5173**
+
+
+## Link para o vídeo de demosntração do produto
+
+### https://youtu.be/zujJ9JPkDXY

@@ -1,6 +1,11 @@
 import app from "./app";
 import prisma from "./prisma/client";
 
+// Global BigInt serialization fix
+(BigInt.prototype as any).toJSON = function () {
+  return Number(this);
+};
+
 const PORT = process.env.PORT || 3333;
 
 async function main() {
